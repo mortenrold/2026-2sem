@@ -1,0 +1,21 @@
+.kasse {
+    background: lightcoral;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+}
+.kasse div {
+    background: wheat;
+    margin: 20px;
+    padding: 10px;
+}
+.kasse-special {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+body {
+    display: flex;
+    justify-content: space-evenly;
+}

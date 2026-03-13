@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            background: #ccc;
+            padding: 10px;
+            display: grid;
+            grid-template-areas:
+                "logo    nav     nav     nav"
+                "content content banner1 banner1"
+                "content content banner2 banner2"
+                "footer  footer  footer  footer";
+            gap: 20px;
+        }
+        .kasse {
+            background: rgb(158, 196, 82);
+            padding: 10px;
+            color: white;
+            font-family: system-ui;
+        }
+        .one {
+            grid-area: logo;
+        }
+        .two {
+            grid-area: nav;
+        }
+        .three {
+            grid-area: content;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .four {
+            grid-area: banner1;
+        }
+        .five {
+            grid-area: banner2;
+        }
+        .six {
+            grid-area: footer;
+        }
+        .three div {
+            background: green;
+            padding: 10px;
+        }
+        .a {
+            grid-column: 1/3;
+        }
+        .e {
+            grid-row: 2/4;
+            grid-column: 3/4;
+        }
+
+        @media screen and (max-width: 900px) {
+            .container {
+                grid-template-areas:
+                    "logo"
+                    "nav"
+                    "content"
+                    "banner1"
+                    "banner2"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="kasse one">1</div>
+        <div class="kasse two">2</div>
+        <div class="kasse three">
+            <div class="a">A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+            <div class="e">E</div>
+            <div>F</div>
+            <div>G</div>
+        </div>
+        <div class="kasse four">4</div>
+        <div class="kasse five">5</div>
+        <div class="kasse six">6</div>
+    </div>
+</body>
+</html>
